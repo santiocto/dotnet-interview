@@ -1,10 +1,16 @@
 using Microsoft.EntityFrameworkCore;
+using TodoDataAccess;
+using TodoDataAccess.Implementation;
+using TodoDataAccess.Interfaces;
+using TodoLogic.Implementation;
+using TodoLogic.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 builder
     .Services.AddDbContext<TodoContext>(opt =>
-        opt.UseSqlServer(builder.Configuration.GetConnectionString("TodoContext"))
-    )
+        opt.UseSqlServer(builder.Configuration.GetConnectionString("TodoContext")))
+    .AddScoped<ITodoListRepository, TodoListRepository>()
+    .AddScoped<ITodoListService, TodoListService>()
     .AddEndpointsApiExplorer()
     .AddControllers();
 
