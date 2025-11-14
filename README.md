@@ -26,7 +26,7 @@ If you prefer to run the API locally without the devcontainer, you can spin up a
    ```
    "TodoContext": "Server=localhost,1433;Database=CrunchInterview;User Id=sa;Password=Password123!;TrustServerCertificate=True;"
    ```
-3. Create the schema via EF Core (`dotnet ef database update --project TodoDataAccess`) or run your SQL scripts against `localhost,1433`.
+3. Create the schema via EF Core (`dotnet ef database update --project TodoDataAccess --startup-project TodoApi`) or run your SQL scripts against `localhost,1433`.
 
 With that container running you can execute `dotnet run --project TodoApi` and `dotnet test TodoApi.Tests` directly on your host machine.
 

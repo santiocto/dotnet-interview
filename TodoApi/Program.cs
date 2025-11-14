@@ -11,13 +11,31 @@ builder
         opt.UseSqlServer(builder.Configuration.GetConnectionString("TodoContext")))
     .AddScoped<ITodoListRepository, TodoListRepository>()
     .AddScoped<ITodoListService, TodoListService>()
-    .AddEndpointsApiExplorer()
-    .AddControllers();
+    .AddScoped<ITodoItemRepository, TodoItemRepository>()
+    .AddScoped<ITodoItemService, TodoItemService>();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddControllers();
+
+
 
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 
+
+
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Todo API v1");
+    });
+}
 
 app.UseAuthorization();
 app.MapControllers();
