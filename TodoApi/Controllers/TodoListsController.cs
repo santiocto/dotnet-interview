@@ -30,7 +30,7 @@ namespace TodoApi.Controllers
         public async Task<ActionResult<TodoList>> GetTodoList(long id)
         {
             var todoList = await _todoListService.GetByIdAsync(id);
-            return todoList is null ? NotFound() : Ok(todoList);
+            return Ok(todoList);
         }
 
         // PUT: api/todolists/5
@@ -38,7 +38,7 @@ namespace TodoApi.Controllers
         public async Task<ActionResult> PutTodoList(long id, UpdateTodoList payload)
         {
             var updated = await _todoListService.UpdateAsync(id, payload.Name);
-            return updated is null ? NotFound() : Ok(updated);
+            return Ok(updated);
         }
 
         // POST: api/todolists
@@ -54,7 +54,7 @@ namespace TodoApi.Controllers
         public async Task<ActionResult> DeleteTodoList(long id)
         {
             var deleted = await _todoListService.DeleteAsync(id);
-            return deleted ? NoContent() : NotFound();
+            return NoContent();
         }
     }
 }

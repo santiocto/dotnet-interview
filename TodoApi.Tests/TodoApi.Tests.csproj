@@ -26,9 +26,5 @@
 		<ProjectReference Include="..\TodoLogic\TodoLogic.csproj" />
 		<ProjectReference Include="..\TodoDataAccess\TodoDataAccess.csproj" />
 	</ItemGroup>
-	<ItemGroup>
-		<Folder Include="Logic\" />
-		<Folder Include="DataAcess\" />
-	</ItemGroup>
 
 </Project>
