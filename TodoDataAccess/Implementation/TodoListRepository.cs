@@ -15,12 +15,17 @@ public class TodoListRepository : ITodoListRepository
 
     public async Task<IReadOnlyList<TodoList>> GetAsync()
     {
-        return await _context.TodoList.AsNoTracking().ToListAsync();
+        return await _context.TodoList
+            .Include(i=> i.Items)
+            .AsNoTracking().ToListAsync();
     }
 
     public async Task<TodoList?> GetByIdAsync(long id)
     {
-        return await _context.TodoList.AsNoTracking().FirstOrDefaultAsync(t => t.Id == id);
+        return await _context.TodoList
+            .Include(i=> i.Items)
+            .AsNoTracking()
+            .FirstOrDefaultAsync(t => t.Id == id);
     }
 
     public async Task<TodoList> AddAsync(TodoList todoList)

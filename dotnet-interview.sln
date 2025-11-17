@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoDataAccess", "TodoDataA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoDomain", "TodoDomain\TodoDomain.csproj", "{1194C2AC-81BE-479C-BC64-7BEF2DCDB026}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoMcpServer", "TodoMcpServer\TodoMcpServer.csproj", "{05CDC691-84F2-4BB4-AA84-D2B415529C61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1194C2AC-81BE-479C-BC64-7BEF2DCDB026}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1194C2AC-81BE-479C-BC64-7BEF2DCDB026}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1194C2AC-81BE-479C-BC64-7BEF2DCDB026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05CDC691-84F2-4BB4-AA84-D2B415529C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05CDC691-84F2-4BB4-AA84-D2B415529C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05CDC691-84F2-4BB4-AA84-D2B415529C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05CDC691-84F2-4BB4-AA84-D2B415529C61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
