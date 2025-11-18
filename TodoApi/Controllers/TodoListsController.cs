@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using TodoDomain.Dtos;
 using TodoDomain.Entities;
 using TodoLogic.Interfaces;

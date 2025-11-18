@@ -1,0 +1,814 @@
+{
+	"info": {
+		"_postman_id": "1ea4f295-18c6-47e3-84fa-549b4f0fcdce",
+		"name": "TodoApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34357854"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "todolists",
+					"item": [
+						{
+							"name": "{todoListId}",
+							"item": [
+								{
+									"name": "items",
+									"item": [
+										{
+											"name": "{itemId}",
+											"item": [
+												{
+													"name": "complete",
+													"item": [
+														{
+															"name": "/api/todolists/:todoListId/items/:itemId/complete",
+															"request": {
+																"method": "POST",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/todolists/:todoListId/items/:itemId/complete",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"todolists",
+																		":todoListId",
+																		"items",
+																		":itemId",
+																		"complete"
+																	],
+																	"variable": [
+																		{
+																			"key": "todoListId",
+																			"value": "7293"
+																		},
+																		{
+																			"key": "itemId",
+																			"value": "7293"
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [],
+																		"url": {
+																			"raw": "{{baseUrl}}/api/todolists/:todoListId/items/:itemId/complete",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"api",
+																				"todolists",
+																				":todoListId",
+																				"items",
+																				":itemId",
+																				"complete"
+																			],
+																			"variable": [
+																				{
+																					"key": "todoListId"
+																				},
+																				{
+																					"key": "itemId"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "text",
+																	"header": [],
+																	"cookie": [],
+																	"body": ""
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "/api/todolists/:todoListId/items/:itemId",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/todolists/:todoListId/items/:itemId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"todolists",
+																":todoListId",
+																"items",
+																":itemId"
+															],
+															"variable": [
+																{
+																	"key": "todoListId",
+																	"value": "7293"
+																},
+																{
+																	"key": "itemId",
+																	"value": "7293"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/todolists/:todoListId/items/:itemId",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"todolists",
+																		":todoListId",
+																		"items",
+																		":itemId"
+																	],
+																	"variable": [
+																		{
+																			"key": "todoListId"
+																		},
+																		{
+																			"key": "itemId"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"description\": \"string\",\n  \"id\": 8011,\n  \"todoListId\": 4140,\n  \"isCompleted\": false\n}"
+														}
+													]
+												},
+												{
+													"name": "/api/todolists/:todoListId/items/:itemId",
+													"request": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"description\": \"string\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/todolists/:todoListId/items/:itemId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"todolists",
+																":todoListId",
+																"items",
+																":itemId"
+															],
+															"variable": [
+																{
+																	"key": "todoListId",
+																	"value": "7293"
+																},
+																{
+																	"key": "itemId",
+																	"value": "7293"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "PUT",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"description\": \"string\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/todolists/:todoListId/items/:itemId",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"todolists",
+																		":todoListId",
+																		"items",
+																		":itemId"
+																	],
+																	"variable": [
+																		{
+																			"key": "todoListId"
+																		},
+																		{
+																			"key": "itemId"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												},
+												{
+													"name": "/api/todolists/:todoListId/items/:itemId",
+													"request": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/todolists/:todoListId/items/:itemId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"todolists",
+																":todoListId",
+																"items",
+																":itemId"
+															],
+															"variable": [
+																{
+																	"key": "todoListId",
+																	"value": "7293"
+																},
+																{
+																	"key": "itemId",
+																	"value": "7293"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "DELETE",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/todolists/:todoListId/items/:itemId",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"todolists",
+																		":todoListId",
+																		"items",
+																		":itemId"
+																	],
+																	"variable": [
+																		{
+																			"key": "todoListId"
+																		},
+																		{
+																			"key": "itemId"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "/api/todolists/:todoListId/items",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"description\": \"string\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/todolists/:todoListId/items",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"todolists",
+														":todoListId",
+														"items"
+													],
+													"variable": [
+														{
+															"key": "todoListId",
+															"value": "7293"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"description\": \"string\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/todolists/:todoListId/items",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"todolists",
+																":todoListId",
+																"items"
+															],
+															"variable": [
+																{
+																	"key": "todoListId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"description\": \"string\",\n  \"id\": 8011,\n  \"todoListId\": 4140,\n  \"isCompleted\": false\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/todolists/:id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/todolists/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"todolists",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "7293"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/todolists/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"todolists",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"name\": \"string\",\n  \"id\": 2698,\n  \"items\": [\n    {\n      \"description\": \"string\",\n      \"id\": 5699,\n      \"todoListId\": 7381,\n      \"isCompleted\": true\n    },\n    {\n      \"description\": \"string\",\n      \"id\": 7296,\n      \"todoListId\": 9993,\n      \"isCompleted\": true\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/todolists/:id",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"string\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/todolists/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"todolists",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "7293"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"string\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/todolists/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"todolists",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/todolists/:id",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/todolists/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"todolists",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "7293"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/todolists/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"todolists",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/todolists",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/todolists",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"todolists"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/todolists",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"todolists"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"name\": \"string\",\n    \"id\": 793,\n    \"items\": [\n      {\n        \"description\": \"string\",\n        \"id\": 5330,\n        \"todoListId\": 7543,\n        \"isCompleted\": false\n      },\n      {\n        \"description\": \"string\",\n        \"id\": 3222,\n        \"todoListId\": 7258,\n        \"isCompleted\": true\n      }\n    ]\n  },\n  {\n    \"name\": \"string\",\n    \"id\": 7942,\n    \"items\": [\n      {\n        \"description\": \"string\",\n        \"id\": 9152,\n        \"todoListId\": 3967,\n        \"isCompleted\": false\n      },\n      {\n        \"description\": \"string\",\n        \"id\": 2092,\n        \"todoListId\": 1125,\n        \"isCompleted\": true\n      }\n    ]\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "/api/todolists",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"string\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/todolists",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"todolists"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"string\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/todolists",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"todolists"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"name\": \"string\",\n  \"id\": 2698,\n  \"items\": [\n    {\n      \"description\": \"string\",\n      \"id\": 5699,\n      \"todoListId\": 7381,\n      \"isCompleted\": true\n    },\n    {\n      \"description\": \"string\",\n      \"id\": 7296,\n      \"todoListId\": 9993,\n      \"isCompleted\": true\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
